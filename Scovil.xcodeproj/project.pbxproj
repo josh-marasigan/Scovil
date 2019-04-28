@@ -12,9 +12,11 @@
 		5C1AB43A22752693004F7B51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C1AB43822752693004F7B51 /* Main.storyboard */; };
 		5C1AB43C22752694004F7B51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C1AB43B22752694004F7B51 /* Assets.xcassets */; };
 		5C1AB43F22752694004F7B51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C1AB43D22752694004F7B51 /* LaunchScreen.storyboard */; };
+		C2A72551ED2A9BA43A7C1811 /* Pods_Scovil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B7E5EEB36D1579745EEE38 /* Pods_Scovil.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49AF27B07E946C2EED720797 /* Pods-Scovil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scovil.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scovil/Pods-Scovil.release.xcconfig"; sourceTree = "<group>"; };
 		5C1AB43122752693004F7B51 /* Scovil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scovil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1AB43422752693004F7B51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C1AB43622752693004F7B51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		5C1AB43B22752694004F7B51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C1AB43E22752694004F7B51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C1AB44022752694004F7B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94B7E5EEB36D1579745EEE38 /* Pods_Scovil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scovil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1A2EC08033F94A395EDC763 /* Pods-Scovil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scovil.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scovil/Pods-Scovil.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2A72551ED2A9BA43A7C1811 /* Pods_Scovil.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C52E5E96CBF33EB71A33029 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1A2EC08033F94A395EDC763 /* Pods-Scovil.debug.xcconfig */,
+				49AF27B07E946C2EED720797 /* Pods-Scovil.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5C1AB42822752693004F7B51 = {
 			isa = PBXGroup;
 			children = (
 				5C1AB43322752693004F7B51 /* Scovil */,
 				5C1AB43222752693004F7B51 /* Products */,
+				4C52E5E96CBF33EB71A33029 /* Pods */,
+				DA0A0222ACA490DDB7102DFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = Scovil;
 			sourceTree = "<group>";
 		};
+		DA0A0222ACA490DDB7102DFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94B7E5EEB36D1579745EEE38 /* Pods_Scovil.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C1AB44322752694004F7B51 /* Build configuration list for PBXNativeTarget "Scovil" */;
 			buildPhases = (
+				F89A21DEE9B739B030726932 /* [CP] Check Pods Manifest.lock */,
 				5C1AB42D22752693004F7B51 /* Sources */,
 				5C1AB42E22752693004F7B51 /* Frameworks */,
 				5C1AB42F22752693004F7B51 /* Resources */,
+				56FCBF47AE2D90924CDBF18F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		56FCBF47AE2D90924CDBF18F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Scovil/Pods-Scovil-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scovil/Pods-Scovil-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F89A21DEE9B739B030726932 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Scovil-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5C1AB42D22752693004F7B51 /* Sources */ = {
@@ -280,6 +345,7 @@
 		};
 		5C1AB44422752694004F7B51 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1A2EC08033F94A395EDC763 /* Pods-Scovil.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +364,7 @@
 		};
 		5C1AB44522752694004F7B51 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49AF27B07E946C2EED720797 /* Pods-Scovil.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
