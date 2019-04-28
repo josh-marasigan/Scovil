@@ -12,10 +12,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+    
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
+    {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        self.mainCoordinator.pushRootView()
+        window?.rootViewController = self.mainCoordinator.navController
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
@@ -41,6 +48,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    // MARK: - Main App Coordinator
+    private lazy var mainCoordinator: Coordinator =
+    {
+        let service = Service(rawURL: "https://...")
+        return Coordinator(service: service)
+    }()
 }
 

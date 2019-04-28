@@ -2,5 +2,9 @@
 
 target 'Scovil' do
   use_frameworks!
-  pod 'SnapKit', '4.2.0'
+  inhibit_all_warnings!
+  
+  pod 'SnapKit', '5.0.0'
+  pod 'SwiftyJSON'
+  pod 'Alamofire'
 end
